@@ -22,7 +22,7 @@ export const loginUser = async (user, dispatch, navigate) => {
         dispatch(loginSuccess(res.data));
         navigate('/');
     } catch (error) {
-        dispatch(loginFailed());
+        dispatch(loginFailed(error.response.data));
     }
 };
 
@@ -34,7 +34,8 @@ export const registerUser = async (user, dispatch, navigate) => {
         dispatch(registerSuccess(res.data));
         navigate('/login');
     } catch (error) {
-        dispatch(registerFailed());
+        console.log(error);
+        dispatch(registerFailed(error.response.data));
     }
 }
 
@@ -47,10 +48,12 @@ export const logoutUser = async (id, dispatch, navigate, accessToken, axiosJWT) 
                 token: `Bearer ${accessToken}`,
             }
         });
+        console.log('here');
         dispatch(logoutSuccess());
         navigate('/login');
     } catch (error) {
         dispatch(logoutFailed());
     }
 }
+
 

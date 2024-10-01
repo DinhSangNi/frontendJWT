@@ -6,12 +6,12 @@ const authSlice = createSlice({
         login: {
             isLoading: false,
             currentUser: null,
-            isError: false,
+            error: null,
         },
         register: {
             isLoading: false,
             currentUser: null,
-            isError: false,
+            error: null,
         },
         logout: {
             isLoading: false,
@@ -25,11 +25,11 @@ const authSlice = createSlice({
         loginSuccess: (state, action) => {
             state.login.isLoading = false;
             state.login.currentUser = action.payload;
-            state.login.isError = false;
+            state.login.error = null;
         },
-        loginFailed: state => {
+        loginFailed: (state, action) => {
             state.login.isLoading = false;
-            state.login.isError = true;
+            state.login.error = action.payload;
         },
         registerStart: state => {
             state.register.isLoading = true;
@@ -37,11 +37,11 @@ const authSlice = createSlice({
         registerSuccess: (state, action) => {
             state.register.isLoading = false;
             state.register.currentUser = action.payload;
-            state.register.isError = false;
+            state.register.error = null;
         },
-        registerFailed: state => {
+        registerFailed: (state, action) => {
             state.register.isLoading = false;
-            state.register.isError = true;
+            state.register.error = action.payload;
         },
         logoutStart: state => {
             state.logout.isLoading = true;
@@ -49,6 +49,7 @@ const authSlice = createSlice({
         logoutSuccess: state => {
             state.logout.isLoading = false;
             state.login.currentUser = null;
+            state.login.error = null;
             state.logout.isError = false;
         },
         logoutFailed: state => {

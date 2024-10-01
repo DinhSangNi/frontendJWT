@@ -5,9 +5,11 @@ import Login from "./pages/Login";
 import HomePage from './pages/HomePage';
 
 function App() {
+
   return (
     <Router>
       <div className="App">
+
         <Routes>
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />

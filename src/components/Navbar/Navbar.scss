@@ -1,0 +1,66 @@
+.navbar-container {
+  .navbar-logo {
+  }
+  .collapse-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.register + .login {
+  margin-left: 20px;
+}
+
+.register {
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  &:hover {
+    opacity: 0.5;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.login {
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.cart-block {
+  i {
+    color: #333;
+  }
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  i {
+    color: #333;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.user-menu {
+  padding: 10px 20px;
+  box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  .menu-item {
+    display: flex;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+.register-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  form {
+    width: 40%;
+    border: 1px solid #dfdfdf;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: red;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    input {
+      border-radius: 8px;
+      border: 1px solid #dfdfdf;
+      padding: 5px;
+    }
+  }
+}
+
+.register-policy {
+  p {
+    color: #333;
+    font-size: 13px;
+
+    a {
+      text-decoration: none;
+      font-weight: 680;
+
+      &:hover {
+        opacity: 1.5;
+      }
+    }
+  }
+}
+
+.button {
+  width: 60%;
+  border: transparent;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 8px 0;
+  background: #05b462;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .login-wrapper {
+    form {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-wrapper {
+    form {
+      width: 60%;
+    }
+  }
+}
