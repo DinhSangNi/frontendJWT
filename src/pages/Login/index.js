@@ -92,7 +92,7 @@ function Login() {
                                 <label htmlFor='login-input-remember-me'>Remember me</label>
                             </div>
                             <div className='login-forgot-password'>
-                                <Link to='/forgot_password'>Forgot password</Link>
+                                <Link to='/forgotpassword'>Forgot password</Link>
                             </div>
                         </div>
                         <button className="fluid ui login-button blue">Log in</button>
